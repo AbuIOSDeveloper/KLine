@@ -3,7 +3,7 @@
 非常的流畅，占用内存少，使用矢量进行填充K线
 
 通过宏自定义K线，让你随心所欲定义K线高度，宽度，主图、幅图占比
-
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/自定义K线.png)
 
 横竖屏完美适配(暂时没有适配iPhoneX)、随意切换
 
