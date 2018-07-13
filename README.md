@@ -6,18 +6,20 @@
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/自定义K线.png)
 
 横竖屏完美适配(暂时没有适配iPhoneX)、随意切换
-
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/横竖屏切换，masonry适配.png)
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/横屏图.png)
 
 单条线、多条线、柱状图轻而易举使用
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/贝塞尔曲线.png)
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/K线柱状图.png)
 
 
 K线幅图指标计算（能与国际主流平台数据完美吻合，只给出部分指标计算，由于其他原因暂不公开其他二十几种指标算法）
-
-
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/计算K线幅图指标.png)
 
 
 K线绘制以及K线刷新
-
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/开启刷新代码.png)
 
 
 本GitHub已有GCDAsynSocket与Websocket的demo，行情尽在你的眼前，喜欢的给个star哦，谢谢！
