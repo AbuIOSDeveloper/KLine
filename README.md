@@ -14,12 +14,13 @@
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/K线柱状图.png)
 
 
-K线幅图指标计算（能与国际主流平台数据完美吻合，只给出部分指标计算，由于其他原因暂不公开其他二十几种指标算法）
+K线幅图指标计算（能与国际主流平台数据完美吻合，只给出部分指标计算(MACD,KDJ、WR 一般平台K线有这些幅图指标就差不多)，由于其他原因暂不公开其他二十几种指标算法）
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/计算K线幅图指标.png)
 
 
 K线绘制以及K线刷新
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/开启刷新代码.png)
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/绘制刷新K线.png)
 
 
 本GitHub已有GCDAsynSocket与Websocket的demo，行情尽在你的眼前，喜欢的给个star哦，谢谢！
