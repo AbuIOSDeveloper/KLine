@@ -1,0 +1,18 @@
+PODS:
+  - FHHFPSIndicator (1.0.0)
+  - KVOController (1.2.0)
+  - Masonry (1.0.2)
+
+DEPENDENCIES:
+  - FHHFPSIndicator
+  - KVOController
+  - Masonry
+
+SPEC CHECKSUMS:
+  FHHFPSIndicator: b4d34c3a93b702ad18358a4eb49839f83f4f30fb
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: 38fcfdbb7b74ea0c67b2190aca59b5fbb8cd87ce
+
+COCOAPODS: 1.0.0
