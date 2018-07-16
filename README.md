@@ -22,7 +22,7 @@ K线绘制以及K线刷新
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/开启刷新代码.png)
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/绘制刷新K线.png)
 
-
+后面将继续优化刷新逻辑、添加分时图、各种周期图的切换。
 本GitHub已有GCDAsynSocket与Websocket的demo，行情尽在你的眼前，喜欢的给个star哦，谢谢！
 
 
