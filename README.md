@@ -1,6 +1,8 @@
 # AbuKlineView
-(CAShapelayer + UIBezierPath)绘制K线支撑横竖屏切换、刷新、masonry适配，完美支持金融产品
+(CAShapelayer + UIBezierPath)绘制K线支撑横竖屏切换、刷新、长按、缩放、masonry适配，完美支持金融产品
 非常的流畅，占用内存少，使用矢量进行填充K线
+
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/2018-07-17%2018_16_57.gif)
 
 通过宏自定义K线，让你随心所欲定义K线高度，宽度，主图、幅图占比
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/自定义K线.png)
