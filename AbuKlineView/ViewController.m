@@ -29,14 +29,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton * btn = [[UIButton alloc]init];
-    btn.frame = CGRectMake(10, 30, 200, 30);
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"隐藏幅图按钮，暂时还不是很完善" forState:UIControlStateNormal];//这个功能没有全部完善
-    [btn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [self.view addSubview:btn];
+//    UIButton * btn = [[UIButton alloc]init];
+//    btn.frame = CGRectMake(10, 30, 200, 30);
+//    btn.backgroundColor = [UIColor redColor];
+//    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn setTitle:@"隐藏幅图按钮，暂时还不是很完善" forState:UIControlStateNormal];//这个功能没有全部完善
+//    [btn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+//    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+//    [self.view addSubview:btn];
     [self.view addSubview:self.kLineView];
     
     [self addSubView];
@@ -113,15 +113,17 @@
     NSDictionary * stockDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     NSArray * stockData = stockDict[@"d"][@"p"];
-    for (NSDictionary * dict in stockData) {
+    for (int i = 0; i < stockData.count; i++)
+    {
+        NSDictionary * dic = stockData[i];
         AbuChartCandleModel * model = [[AbuChartCandleModel alloc]init];
-        model.close = [dict[@"c"] floatValue];
-        model.open = [dict[@"o"] floatValue];
-        model.high = [dict[@"h"] floatValue];
-        model.low = [dict[@"l"] floatValue];
-        model.date = dict[@"t"];
-        model.volumn = dict[@"v"];
-        if ([model.date rangeOfString:@"12"].location != NSNotFound)
+        model.close = [dic[@"c"] floatValue];
+        model.open = [dic[@"o"] floatValue];
+        model.high = [dic[@"h"] floatValue];
+        model.low = [dic[@"l"] floatValue];
+        model.date = [self changeDtaForMatMmDd:dic[@"t"] range:NSMakeRange(14, 2)];
+        model.volumn = dic[@"v"];
+        if (i % 16 == 0)
         {
             model.isDrawDate = YES;
         }
@@ -169,6 +171,46 @@
     model.date = [NSString stringWithFormat:@"%d",time];
     [self.kLineView refreshFSKlineView:model];
 }
+
+- (NSString *)changeDtaForMatMmDd:(NSString *)data range:(NSRange)range
+{
+    NSArray * timeArray = [data componentsSeparatedByString:@"T"];
+    NSString * time = [timeArray.firstObject stringByAppendingString:[NSString stringWithFormat:@" %@",timeArray.lastObject]];
+    return time;
+}
+
+- (long)changeTime:(NSString *)time
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    //指定时间显示样式: HH表示24小时制 hh表示12小时制
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSDate *lastDate = [formatter dateFromString:time];
+    //以 1970/01/01 GMT为基准，得到lastDate的时间戳
+    long firstStamp = [lastDate timeIntervalSince1970];
+    return firstStamp;
+}
+
+//-(NSString*)updateTime:(NSString*)time{
+//
+//    NSString *format = nil;
+//    //日周
+//    if ([self.currentRequestType containsString:@"D"]||[self.currentRequestType containsString:@"W"]||[self.currentRequestType isEqualToString:@"MN"]) {
+//
+//        format = @"MM-dd";
+//        //分钟
+//    }else if ([self.currentRequestType containsString:@"M"]||[self.currentRequestType containsString:@"H"])
+//    {
+//        format = @"MM-dd HH:mm";
+//    }
+//    NSDateFormatter*formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateStyle:NSDateFormatterMediumStyle];
+//    [formatter setTimeStyle:NSDateFormatterShortStyle];
+//    [formatter setDateFormat:format];
+//    int timeval = [time intValue];
+//    NSDate*confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeval];
+//    NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
+//    return confromTimespStr;
+//}
 
 - (UIInterfaceOrientation)orientation
 {

@@ -536,14 +536,14 @@ static inline bool isEqualZero(float value)
             layer.string = model.date;
             if (isEqualZero(model.highPoint.x))
             {
-                layer.frame =  CGRectMake(0, self.scrollView.height - self.timeLayerHeight - self.bottomMargin, 60, self.timeLayerHeight);
+                layer.frame =  CGRectMake(0, self.scrollView.height - self.timeLayerHeight - self.bottomMargin, 80, self.timeLayerHeight);
                 
             }
             
             else
             {
                 layer.position = CGPointMake(model.highPoint.x + self.candleWidth, self.scrollView.height / self.chartSize - self.timeLayerHeight/2 - self.bottomMargin);
-                layer.bounds = CGRectMake(0, 0, 60, self.timeLayerHeight);
+                layer.bounds = CGRectMake(0, 0, 80, self.timeLayerHeight);
                 
             }
             [self.timeLayer addSublayer:layer];
