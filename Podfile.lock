@@ -1,18 +1,28 @@
 PODS:
-  - FHHFPSIndicator (1.0.0)
   - KVOController (1.2.0)
   - Masonry (1.0.2)
+  - MJExtension (3.0.15.1)
+  - SocketRocket (0.5.1)
 
 DEPENDENCIES:
-  - FHHFPSIndicator
   - KVOController
   - Masonry
+  - MJExtension
+  - SocketRocket
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KVOController
+    - Masonry
+    - MJExtension
+    - SocketRocket
 
 SPEC CHECKSUMS:
-  FHHFPSIndicator: b4d34c3a93b702ad18358a4eb49839f83f4f30fb
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: 38fcfdbb7b74ea0c67b2190aca59b5fbb8cd87ce
+PODFILE CHECKSUM: 0693b7420fab0d57b27f69b7d3d3b610110e6416
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.5.3

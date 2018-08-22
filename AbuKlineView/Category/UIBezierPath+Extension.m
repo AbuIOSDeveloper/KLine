@@ -16,6 +16,9 @@
 {
     UIBezierPath * path = [UIBezierPath bezierPath];
     [linesArray enumerateObjectsUsingBlock:^(AbuKlineModel * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.xPosition == 0) {
+            return ;
+        }
         //判断是否为一个元素
         if (idx == 0) {
             [path moveToPoint:CGPointMake(obj.xPosition, obj.yPosition)];
@@ -57,13 +60,23 @@
     CGFloat height = fabs(close-open);
     [candlePath moveToPoint:CGPointMake(xPostion, y)];
     [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y)];
-    [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, high)];
-    [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y)];
+    if (y > high) {
+      [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, high)];
+      [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y)];
+    }
+
     [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth, y)];
     [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth, y + height)];
     [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y + height)];
-    [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, low)];
-    [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y + height)];
+//    if ( (y + height) > max) {
+//        [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, max)];
+//        [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y+height)];
+//    }
+     if ((y + height) < low)
+    {
+        [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, low)];
+        [candlePath addLineToPoint:CGPointMake(xPostion + candleWidth / 2.0f, y+height)];
+    }
     [candlePath addLineToPoint:CGPointMake(xPostion, y + height)];
     [candlePath addLineToPoint:CGPointMake(xPostion, y)];
     [candlePath closePath];

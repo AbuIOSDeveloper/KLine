@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+     [[WebSocket shareWebSocketManage] connectWebServiceWithURL:@""];//socket链接
     return YES;
 }
 

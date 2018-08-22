@@ -5,6 +5,8 @@ pod 'Masonry'
 
 pod 'KVOController'
 
-pod 'FHHFPSIndicator'
+pod 'SocketRocket'
+
+pod 'MJExtension'
 
 end

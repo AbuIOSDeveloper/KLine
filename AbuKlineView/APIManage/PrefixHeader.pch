@@ -1,0 +1,154 @@
+//
+//  PrefixHeader.pch
+//  ABuKLineChartView
+//
+//  Created by jefferson on 2018/7/18.
+//  Copyright © 2018年 jefferson. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+#ifdef __OBJC__
+
+#import <SRWebSocket.h>
+#import <Masonry.h>
+#import <KVOController.h>
+
+#import "KlineTitleView.h"
+#import "AbuPriceView.h"
+#import "AbuIdictorView.h"
+#import "AbuCharViewProtocol.h"
+#import "AbuKlineView.h"
+
+
+/** ********************数据模型******************** */
+#import "KLineModel.h"
+#import "AbuKlineModel.h"//线模型
+#import "AbuPostionModel.h"//点模型
+#import "AbuMacadPostionModel.h"
+
+/** ********************单例******************** */
+#import "WebSocket.h"
+#import "KLineCalculate.h"
+#import "KLineSubCalculate.h"
+#import "KLineSocketDataRefersh.h"
+
+#import "UIColor+Extension.h"
+#import "UIView+Extension.h"
+#import "UIBezierPath+Extension.h"
+
+
+/** ********************SocketURL******************** */
+/**
+ *     "wss://tradeapi4.mc-forex.net:4433/quote",
+ *     "wss://tradeapi7.mc-forex.net:4433/quote",
+ *     "wss://tradeapi2.mc-forex.net:4433/quote",
+ *     "wss://tradeapi5.mc-forex.net:4433/quote",
+ *     "wss://tradeapi9.mc-forex.net:4433/quote",
+ *     "wss://tradeapi3.mc-forex.net:4433/quote",
+ *     "wss://tradeapi8.mc-forex.net:4433/quote",
+ *     "wss://tradeapi1.mc-forex.net:4433/quote"
+ */
+#define SOCKETURL1    @"wss://tradeapi1.mc-forex.net:4433/quote"
+#define SOCKETURL2    @"wss://tradeapi2.mc-forex.net:4433/quote"
+#define SOCKETURL3    @"wss://tradeapi3.mc-forex.net:4433/quote"
+#define SOCKETURL4    @"wss://tradeapi4.mc-forex.net:4433/quote"//这个服务器较为稳定
+#define SOCKETURL5    @"wss://tradeapi5.mc-forex.net:4433/quote"
+#define SOCKETURL7    @"wss://tradeapi7.mc-forex.net:4433/quote"
+#define SOCKETURL8    @"wss://tradeapi8.mc-forex.net:4433/quote"
+#define SOCKETURL9    @"wss://tradeapi9.mc-forex.net:4433/quote"
+
+
+
+
+
+
+/** ********************宏定义******************** */
+
+#define ContentOffSet @"contentOffset"
+
+#define ContentOffSetMacd @"contentOffsetMacd"
+
+#define IsDictionaryNull(dict) (nil == dict || ![dict isKindOfClass:[NSDictionary class]]\
+|| [dict isKindOfClass:[NSNull class]] || [dict allKeys].count <= 0)
+#define IsArrayNull(array) ((nil == array || ![array isKindOfClass:[NSArray class]]\
+|| [array isKindOfClass:[NSNull class]] || array.count <= 0))
+#define IsStringNull(string) (nil == string || [string isKindOfClass:[NSNull class]] \
+|| string.length <= 0)
+#define IsObjectNull(object) (nil == object || [object isKindOfClass:[NSNull class]])
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+
+#define widthradio  SCREENWIDTH/375
+#define heightradio SCREENHEIGHT/667
+
+#define midDistance 40
+#define topDistance 10
+#define leftDistance 10
+#define rightDistance 10
+#define bottomDistance 10
+
+#define MinCount 10
+#define MaxCount 30
+
+#define maxCandelWith 20
+
+#define minCandelWith 4
+
+#define ChartViewHigh 400
+
+#define LandscapeChartViewHigh 300
+
+#define orignScale 1.0
+#define orignChartScale 3.0f/2.0f
+#define orignIndicatorScale  1.0f / 3.0f
+#define orignIndicatorOrignY 2.0f * orignIndicatorScale
+
+
+/**
+ * 蜡烛图-上涨颜色
+ */
+#define RISECOLOR [UIColor colorWithHexString:@"#fb463e"]
+/**
+ * 蜡烛图-下跌颜色
+ */
+#define DROPCOLOR [UIColor colorWithHexString:@"#30b840"]
+
+/**
+ * 横竖屏方向
+ */
+#define Orientation [[UIApplication sharedApplication] statusBarOrientation]
+/**
+ * 当前屏幕方向是否竖屏  YES—>竖屏  NO->横屏
+ */
+#define Portrait (Orientation==UIDeviceOrientationPortrait||Orientation==UIDeviceOrientationPortraitUpsideDown)
+#define LandscapeLeft (Orientation == UIDeviceOrientationLandscapeLeft)
+
+/**
+ * 总宽度
+ */
+#define TotalWidth      (Portrait ? (PortraitTotalWidth) : (LanscapeTotalWidth))
+
+#define PortraitTotalWidth    KSCREEN_WIDTH
+#define LanscapeTotalWidth    KSCREEN_HEIGHT
+
+/**
+ * 适用于横竖屏的时候，宽度总是小值，高度总是大值
+ */
+#define KSCREEN_WIDTH    MIN([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
+#define KSCREEN_HEIGHT   MAX([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
+
+typedef enum
+{
+    MACD = 1,
+    KDJ,
+    WR
+}DataLineType;
+
+#endif
+
+#endif /* PrefixHeader_h */
