@@ -200,8 +200,7 @@ static inline bool isEqualZero(float value)
             self.minY  -=  0.5;
         }
     }
-    
-    CGFloat contentHeigh = self.scrollView.height / self.chartSize - self.topMargin - self.timeLayerHeight - self.topMargin;
+    CGFloat contentHeigh = self.scrollView.height / self.chartSize - self.topMargin - self.timeLayerHeight - self.bottomMargin;
     self.scaleY = contentHeigh / (self.maxY-self.minY);
 }
 

@@ -34,6 +34,10 @@
 		840AC4E6212D759D00F22AB0 /* stock5.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E2212D759D00F22AB0 /* stock5.json */; };
 		840AC4E7212D759D00F22AB0 /* stock60.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E3212D759D00F22AB0 /* stock60.json */; };
 		840AC4E9212D768900F22AB0 /* stockDay.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E8212D768900F22AB0 /* stockDay.json */; };
+		843E013F2133A36F0089D196 /* KlineCandleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E013E2133A36F0089D196 /* KlineCandleLayer.m */; };
+		843E01452133D98A0089D196 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E01432133D98A0089D196 /* BaseViewController.m */; };
+		843E014E2133DEE70089D196 /* KlineDataReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E01482133DEE60089D196 /* KlineDataReformer.m */; };
+		843E014F2133DEE70089D196 /* KlineCandleDataReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */; };
 		84A6C6631FCED0660094FDA5 /* stock1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C6621FCED0660094FDA5 /* stock1.json */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +70,6 @@
 		840AC4B8212D731A00F22AB0 /* AbuPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuPriceView.m; sourceTree = "<group>"; };
 		840AC4B9212D731A00F22AB0 /* AbuCandChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCandChartView.h; sourceTree = "<group>"; };
 		840AC4BA212D731A00F22AB0 /* AbuIdictorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuIdictorView.h; sourceTree = "<group>"; };
-		840AC4BB212D731A00F22AB0 /* AbuCharViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCharViewProtocol.h; sourceTree = "<group>"; };
 		840AC4BC212D731A00F22AB0 /* AbuKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuKlineView.m; sourceTree = "<group>"; };
 		840AC4BD212D731A00F22AB0 /* AbuIdictorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuIdictorView.m; sourceTree = "<group>"; };
 		840AC4BE212D731A00F22AB0 /* AbuCandChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuCandChartView.m; sourceTree = "<group>"; };
@@ -88,6 +91,15 @@
 		840AC4E2212D759D00F22AB0 /* stock5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock5.json; sourceTree = "<group>"; };
 		840AC4E3212D759D00F22AB0 /* stock60.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock60.json; sourceTree = "<group>"; };
 		840AC4E8212D768900F22AB0 /* stockDay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockDay.json; sourceTree = "<group>"; };
+		843E013D2133A36F0089D196 /* KlineCandleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KlineCandleLayer.h; sourceTree = "<group>"; };
+		843E013E2133A36F0089D196 /* KlineCandleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlineCandleLayer.m; sourceTree = "<group>"; };
+		843E01432133D98A0089D196 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		843E01442133D98A0089D196 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		843E01462133DE0B0089D196 /* AbuCharViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCharViewProtocol.h; sourceTree = "<group>"; };
+		843E01482133DEE60089D196 /* KlineDataReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineDataReformer.m; sourceTree = "<group>"; };
+		843E014A2133DEE60089D196 /* KlineDataReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineDataReformer.h; sourceTree = "<group>"; };
+		843E014B2133DEE70089D196 /* KlineCandleDataReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineCandleDataReformer.h; sourceTree = "<group>"; };
+		843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineCandleDataReformer.m; sourceTree = "<group>"; };
 		84A6C6621FCED0660094FDA5 /* stock1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock1.json; sourceTree = "<group>"; };
 		BB62F47A80B624362DDD64EB /* Pods-AbuKlineView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbuKlineView.release.xcconfig"; path = "Pods/Target Support Files/Pods-AbuKlineView/Pods-AbuKlineView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +137,7 @@
 		3B5D5BBF1F5F10A100C0E68B /* AbuKlineView */ = {
 			isa = PBXGroup;
 			children = (
+				843E013C2133A0AC0089D196 /* KlineCandleLayer */,
 				840AC4CE212D731A00F22AB0 /* APIManage */,
 				840AC4A5212D731A00F22AB0 /* Category */,
 				840AC4C4212D731A00F22AB0 /* KLineModel */,
@@ -135,6 +148,8 @@
 				3B5D5BC41F5F10A100C0E68B /* AppDelegate.m */,
 				3B5D5BC61F5F10A100C0E68B /* ViewController.h */,
 				3B5D5BC71F5F10A100C0E68B /* ViewController.m */,
+				843E01442133D98A0089D196 /* BaseViewController.h */,
+				843E01432133D98A0089D196 /* BaseViewController.m */,
 				84A6C6621FCED0660094FDA5 /* stock1.json */,
 				840AC4E2212D759D00F22AB0 /* stock5.json */,
 				840AC4E0212D759D00F22AB0 /* stock15.json */,
@@ -171,10 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				840AC4A6212D731A00F22AB0 /* UIBezierPath+Extension.h */,
-				840AC4A7212D731A00F22AB0 /* UIColor+Extension.h */,
-				840AC4A8212D731A00F22AB0 /* UIView+Extension.h */,
 				840AC4A9212D731A00F22AB0 /* UIBezierPath+Extension.m */,
+				840AC4A7212D731A00F22AB0 /* UIColor+Extension.h */,
 				840AC4AA212D731A00F22AB0 /* UIColor+Extension.m */,
+				840AC4A8212D731A00F22AB0 /* UIView+Extension.h */,
 				840AC4AB212D731A00F22AB0 /* UIView+Extension.m */,
 			);
 			path = Category;
@@ -206,6 +221,10 @@
 				840AC4B4212D731A00F22AB0 /* KLineSubCalculate.m */,
 				840AC4B2212D731A00F22AB0 /* KLineCalculate.h */,
 				840AC4B5212D731A00F22AB0 /* KLineCalculate.m */,
+				843E014B2133DEE70089D196 /* KlineCandleDataReformer.h */,
+				843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */,
+				843E014A2133DEE60089D196 /* KlineDataReformer.h */,
+				843E01482133DEE60089D196 /* KlineDataReformer.m */,
 			);
 			path = KLineCaculate;
 			sourceTree = "<group>";
@@ -221,7 +240,6 @@
 				840AC4BD212D731A00F22AB0 /* AbuIdictorView.m */,
 				840AC4C0212D731A00F22AB0 /* AbuKlineView.h */,
 				840AC4BC212D731A00F22AB0 /* AbuKlineView.m */,
-				840AC4BB212D731A00F22AB0 /* AbuCharViewProtocol.h */,
 			);
 			path = KLineView;
 			sourceTree = "<group>";
@@ -253,6 +271,7 @@
 		840AC4CD212D731A00F22AB0 /* KLineProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				843E01462133DE0B0089D196 /* AbuCharViewProtocol.h */,
 			);
 			path = KLineProtocol;
 			sourceTree = "<group>";
@@ -263,6 +282,15 @@
 				840AC4CF212D731A00F22AB0 /* PrefixHeader.pch */,
 			);
 			path = APIManage;
+			sourceTree = "<group>";
+		};
+		843E013C2133A0AC0089D196 /* KlineCandleLayer */ = {
+			isa = PBXGroup;
+			children = (
+				843E013D2133A36F0089D196 /* KlineCandleLayer.h */,
+				843E013E2133A36F0089D196 /* KlineCandleLayer.m */,
+			);
+			path = KlineCandleLayer;
 			sourceTree = "<group>";
 		};
 		E72041AE25B125B33B20953D /* Pods */ = {
@@ -391,8 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840AC4DD212D731A00F22AB0 /* AbuPostionModel.m in Sources */,
+				843E01452133D98A0089D196 /* BaseViewController.m in Sources */,
 				840AC4D7212D731A00F22AB0 /* AbuPriceView.m in Sources */,
 				840AC4D2212D731A00F22AB0 /* UIView+Extension.m in Sources */,
+				843E014E2133DEE70089D196 /* KlineDataReformer.m in Sources */,
 				840AC4D4212D731A00F22AB0 /* KLineSubCalculate.m in Sources */,
 				840AC4D8212D731A00F22AB0 /* AbuKlineView.m in Sources */,
 				3B5D5BC81F5F10A100C0E68B /* ViewController.m in Sources */,
@@ -401,10 +431,12 @@
 				840AC4D1212D731A00F22AB0 /* UIColor+Extension.m in Sources */,
 				3B5D5BC21F5F10A100C0E68B /* main.m in Sources */,
 				840AC4D5212D731A00F22AB0 /* KLineCalculate.m in Sources */,
+				843E014F2133DEE70089D196 /* KlineCandleDataReformer.m in Sources */,
 				840AC4DC212D731A00F22AB0 /* KLineModel.m in Sources */,
 				840AC4D0212D731A00F22AB0 /* UIBezierPath+Extension.m in Sources */,
 				840AC4DE212D731A00F22AB0 /* AbuMacadPostionModel.m in Sources */,
 				840AC4DF212D731A00F22AB0 /* AbuKlineModel.m in Sources */,
+				843E013F2133A36F0089D196 /* KlineCandleLayer.m in Sources */,
 				840AC4DA212D731A00F22AB0 /* AbuCandChartView.m in Sources */,
 				840AC4DB212D731A00F22AB0 /* KlineTitleView.m in Sources */,
 				840AC4D9212D731A00F22AB0 /* AbuIdictorView.m in Sources */,

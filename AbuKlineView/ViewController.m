@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
+#import "KlineDataReformer.h"
 @interface ViewController ()<KlineTitleViewDelegate,webSocketDelegate>
 
 @property (nonatomic, strong) NSString              * currentRequestType;
@@ -31,6 +32,36 @@
 
 @implementation ViewController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    ((AppDelegate *)[UIApplication sharedApplication].delegate).allowRotation = YES;
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    ((AppDelegate *)[UIApplication sharedApplication].delegate).allowRotation = NO;
+    [self supportRotion:UIInterfaceOrientationPortrait];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+- (NSUInteger)supportedInterfaceOrientations
+#else
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#endif
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationLandscapeLeft;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -39,7 +70,12 @@
     [self buildKLineTitleView];
     [self.view addSubview:self.kLineView];
     [self addKLineSubView];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44) ];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [button setTitle:@"旋转" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(rotateScreen:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
       [self requestKLineViewHistoryListWithType:self.currentType];
 }
 
@@ -84,12 +120,21 @@
 }
 
 #pragma mark - 旋转事件
-- (void)statusBarOrientationChange:(NSNotification *)notification
-{
-    
-    self.orientation = [[UIApplication sharedApplication] statusBarOrientation];
+- (void)rotateScreen:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
     WS(weakSelf);
-    if (self.orientation == UIDeviceOrientationPortrait || self.orientation == UIDeviceOrientationPortraitUpsideDown) {
+    if (sender.selected) {
+        [self supportRotion:UIInterfaceOrientationLandscapeLeft];
+        [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(weakSelf.view).offset(40);
+        }];
+        [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(weakSelf.view).offset(70);
+            make.height.mas_offset(LandscapeChartViewHigh);
+        }];
+        
+    } else {
+        [self supportRotion:UIInterfaceOrientationPortrait];
         [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(weakSelf.view).offset(100);
         }];
@@ -98,19 +143,8 @@
             make.top.equalTo(weakSelf.view).offset(130);
             make.height.mas_offset(ChartViewHigh);
         }];
-        
-    }
-    if (self.orientation==UIDeviceOrientationLandscapeLeft || self.orientation == UIDeviceOrientationLandscapeRight) {
-        [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(40);
-        }];
-        [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(70);
-            make.height.mas_offset(LandscapeChartViewHigh);
-        }];
     }
 }
-
 
 #pragma mark ------------------------------------- KlineTitleViewDelegate
 - (void)selectIndex:(KLINETYPE)type
@@ -196,7 +230,7 @@
         }
         [self.dataSource addObject:model];
     }
-    self.dataSource = [[[KLineSubCalculate sharedInstance] initializeQuotaDataWithArray:self.dataSource KPIType:4] mutableCopy];
+    self.dataSource = [[[KlineDataReformer sharedInstance] coverToOriginalDataArray:self.dataSource currentRequestType:self.currentRequestType KPIType:4] mutableCopy];
     dispatch_async(dispatch_get_main_queue(), ^{
         self.kLineView.dataArray = self.dataSource;
     });
