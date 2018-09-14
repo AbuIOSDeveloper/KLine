@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "KlineDataReformer.h"
+#import "KLineSubCalculate.h"
 @interface ViewController ()<KlineTitleViewDelegate,webSocketDelegate>
 
 @property (nonatomic, strong) NSString              * currentRequestType;
@@ -64,7 +64,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor blackColor];
     [WebSocket shareWebSocketManage].delegate = self;
     self.currentType = K_LINE_1MIN;
     [self buildKLineTitleView];
@@ -76,6 +76,13 @@
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(rotateScreen:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIButton *selecteButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44) ];
+    selecteButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [selecteButton setTitle:@"隐藏" forState:UIControlStateNormal];
+    [selecteButton setTitle:@"显示" forState:UIControlStateSelected];
+    [selecteButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [selecteButton addTarget:self action:@selector(selecteAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:selecteButton];
       [self requestKLineViewHistoryListWithType:self.currentType];
 }
 
@@ -98,7 +105,7 @@
         }];
         //翻转为竖屏时
         [self.kLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(130);
+            make.top.equalTo(weakSelf.view).offset(132);
             make.right.equalTo(weakSelf.view.mas_right);
             make.left.equalTo(weakSelf.view.mas_left);
             make.height.mas_offset(ChartViewHigh);
@@ -111,7 +118,7 @@
             make.height.mas_offset(30);
         }];
         [self.kLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(70);
+            make.top.equalTo(weakSelf.view).offset(72);
             make.right.equalTo(weakSelf.view.mas_right);
             make.left.equalTo(weakSelf.view.mas_left);
             make.height.mas_offset(LandscapeChartViewHigh);
@@ -119,7 +126,6 @@
     }
 }
 
-#pragma mark - 旋转事件
 - (void)rotateScreen:(UIButton *)sender {
     sender.selected = !sender.isSelected;
     WS(weakSelf);
@@ -129,7 +135,7 @@
             make.top.equalTo(weakSelf.view).offset(40);
         }];
         [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(70);
+            make.top.equalTo(weakSelf.view).offset(72);
             make.height.mas_offset(LandscapeChartViewHigh);
         }];
         
@@ -138,15 +144,25 @@
         [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(weakSelf.view).offset(100);
         }];
-        //翻转为竖屏时
         [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(130);
+            make.top.equalTo(weakSelf.view).offset(132);
             make.height.mas_offset(ChartViewHigh);
         }];
     }
 }
-
-#pragma mark ------------------------------------- KlineTitleViewDelegate
+- (void)selecteAction:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    BOOL show;
+    if (sender.selected) {
+        show = NO;
+    }
+    else
+    {
+        show = YES;
+    }
+    [self.kLineView isShowOrHiddenIditionChart:show];
+}
 - (void)selectIndex:(KLINETYPE)type
 {
     if (type == self.currentType) {
@@ -160,32 +176,32 @@
 
 - (void)requestKLineViewHistoryListWithType:(KLINETYPE)type
 {
-     if (type == K_LINE_1MIN)//1分钟
+     if (type == K_LINE_1MIN)
     {
         [self loadStockDataWithJson:@"stock1"];
         self.currentRequestType = @"M1";
     }
-    else if (type == K_LINE_5MIN)//5分钟
+    else if (type == K_LINE_5MIN)
     {
         [self loadStockDataWithJson:@"stock5"];
         self.currentRequestType = @"M5";
     }
-    else if (type == K_LINE_15MIN)//15分钟
+    else if (type == K_LINE_15MIN)
     {
         [self loadStockDataWithJson:@"stock15"];
         self.currentRequestType = @"M15";
     }
-    else if (type == K_LINE_30MIN)//30分钟
+    else if (type == K_LINE_30MIN)
     {
         [self loadStockDataWithJson:@"stock30"];
         self.currentRequestType = @"M30";
     }
-    else if (type == K_LINE_1HOUR || type == K_LINE_60MIN)//1小时
+    else if (type == K_LINE_1HOUR || type == K_LINE_60MIN)
     {
          [self loadStockDataWithJson:@"stock60"];
         self.currentRequestType = @"H1";
     }
-    else if (type == K_LINE_DAY)//日
+    else if (type == K_LINE_DAY)
     {
         [self loadStockDataWithJson:@"stockDay"];
         self.currentRequestType = @"D1";
@@ -230,7 +246,7 @@
         }
         [self.dataSource addObject:model];
     }
-    self.dataSource = [[[KlineDataReformer sharedInstance] coverToOriginalDataArray:self.dataSource currentRequestType:self.currentRequestType KPIType:4] mutableCopy];
+    self.dataSource = [[[KLineSubCalculate sharedInstance] initializeQuotaDataWithArray:self.dataSource KPIType:4] mutableCopy];
     dispatch_async(dispatch_get_main_queue(), ^{
         self.kLineView.dataArray = self.dataSource;
     });
@@ -258,10 +274,8 @@
 - (long)changeTime:(NSString *)time
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //指定时间显示样式: HH表示24小时制 hh表示12小时制
     [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     NSDate *lastDate = [formatter dateFromString:time];
-    //以 1970/01/01 GMT为基准，得到lastDate的时间戳
     long firstStamp = [lastDate timeIntervalSince1970];
     return firstStamp;
 }
@@ -269,11 +283,8 @@
 -(NSString*)updateTime:(NSString*)time{
     
     NSString *format = nil;
-    //日周
     if ([self.currentRequestType containsString:@"D"]||[self.currentRequestType containsString:@"W"]||[self.currentRequestType isEqualToString:@"MN"]) {
-        
         format = @"MM-dd";
-        //分钟
     }else if ([self.currentRequestType containsString:@"M"]||[self.currentRequestType containsString:@"H"])
     {
         format = @"MM-dd HH:mm";
@@ -314,9 +325,6 @@
 {
     if (!_kLineView) {
         _kLineView = [[AbuKlineView alloc]init];
-        _kLineView.isShowIndictorView = YES;
-        _kLineView.displayCount = 50;
-        //        _kLineView.backgroundColor = [UIColor redColor];
     }
     return _kLineView;
 }

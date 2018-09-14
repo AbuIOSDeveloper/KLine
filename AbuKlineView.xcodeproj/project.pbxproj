@@ -14,31 +14,31 @@
 		3B5D5BCD1F5F10A100C0E68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D5BCC1F5F10A100C0E68B /* Assets.xcassets */; };
 		3B5D5BD01F5F10A100C0E68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D5BCE1F5F10A100C0E68B /* LaunchScreen.storyboard */; };
 		7B9E8494F47D207246BA9CFC /* libPods-AbuKlineView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B945EAE9C2DE1399B9A393E /* libPods-AbuKlineView.a */; };
-		840AC4D0212D731A00F22AB0 /* UIBezierPath+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4A9212D731A00F22AB0 /* UIBezierPath+Extension.m */; };
-		840AC4D1212D731A00F22AB0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4AA212D731A00F22AB0 /* UIColor+Extension.m */; };
-		840AC4D2212D731A00F22AB0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4AB212D731A00F22AB0 /* UIView+Extension.m */; };
 		840AC4D3212D731A00F22AB0 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4AE212D731A00F22AB0 /* WebSocket.m */; };
-		840AC4D4212D731A00F22AB0 /* KLineSubCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4B4212D731A00F22AB0 /* KLineSubCalculate.m */; };
-		840AC4D5212D731A00F22AB0 /* KLineCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4B5212D731A00F22AB0 /* KLineCalculate.m */; };
-		840AC4D7212D731A00F22AB0 /* AbuPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4B8212D731A00F22AB0 /* AbuPriceView.m */; };
-		840AC4D8212D731A00F22AB0 /* AbuKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4BC212D731A00F22AB0 /* AbuKlineView.m */; };
-		840AC4D9212D731A00F22AB0 /* AbuIdictorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4BD212D731A00F22AB0 /* AbuIdictorView.m */; };
-		840AC4DA212D731A00F22AB0 /* AbuCandChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4BE212D731A00F22AB0 /* AbuCandChartView.m */; };
-		840AC4DB212D731A00F22AB0 /* KlineTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4C3212D731A00F22AB0 /* KlineTitleView.m */; };
-		840AC4DC212D731A00F22AB0 /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4C5212D731A00F22AB0 /* KLineModel.m */; };
-		840AC4DD212D731A00F22AB0 /* AbuPostionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4C8212D731A00F22AB0 /* AbuPostionModel.m */; };
-		840AC4DE212D731A00F22AB0 /* AbuMacadPostionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4CA212D731A00F22AB0 /* AbuMacadPostionModel.m */; };
-		840AC4DF212D731A00F22AB0 /* AbuKlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840AC4CB212D731A00F22AB0 /* AbuKlineModel.m */; };
 		840AC4E4212D759D00F22AB0 /* stock15.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E0212D759D00F22AB0 /* stock15.json */; };
 		840AC4E5212D759D00F22AB0 /* stock30.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E1212D759D00F22AB0 /* stock30.json */; };
 		840AC4E6212D759D00F22AB0 /* stock5.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E2212D759D00F22AB0 /* stock5.json */; };
 		840AC4E7212D759D00F22AB0 /* stock60.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E3212D759D00F22AB0 /* stock60.json */; };
 		840AC4E9212D768900F22AB0 /* stockDay.json in Resources */ = {isa = PBXBuildFile; fileRef = 840AC4E8212D768900F22AB0 /* stockDay.json */; };
-		843E013F2133A36F0089D196 /* KlineCandleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E013E2133A36F0089D196 /* KlineCandleLayer.m */; };
 		843E01452133D98A0089D196 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E01432133D98A0089D196 /* BaseViewController.m */; };
-		843E014E2133DEE70089D196 /* KlineDataReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E01482133DEE60089D196 /* KlineDataReformer.m */; };
-		843E014F2133DEE70089D196 /* KlineCandleDataReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */; };
 		84A6C6631FCED0660094FDA5 /* stock1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C6621FCED0660094FDA5 /* stock1.json */; };
+		84FF7FA9214BA466001BF74D /* UIBezierPath+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F80214BA466001BF74D /* UIBezierPath+Extension.m */; };
+		84FF7FAA214BA466001BF74D /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F81214BA466001BF74D /* UIColor+Extension.m */; };
+		84FF7FAB214BA466001BF74D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F82214BA466001BF74D /* UIView+Extension.m */; };
+		84FF7FAC214BA466001BF74D /* KLineSubCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F89214BA466001BF74D /* KLineSubCalculate.m */; };
+		84FF7FAD214BA466001BF74D /* KLineCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F8A214BA466001BF74D /* KLineCalculate.m */; };
+		84FF7FAE214BA466001BF74D /* KLineSocketDataRefersh.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F8B214BA466001BF74D /* KLineSocketDataRefersh.m */; };
+		84FF7FAF214BA466001BF74D /* KlinePriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F8F214BA466001BF74D /* KlinePriceView.m */; };
+		84FF7FB0214BA466001BF74D /* KlineCurrentPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F90214BA466001BF74D /* KlineCurrentPriceView.m */; };
+		84FF7FB1214BA466001BF74D /* KlineVerticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F92214BA466001BF74D /* KlineVerticalView.m */; };
+		84FF7FB2214BA466001BF74D /* AbuKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F96214BA466001BF74D /* AbuKlineView.m */; };
+		84FF7FB3214BA466001BF74D /* AbuCandChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F97214BA466001BF74D /* AbuCandChartView.m */; };
+		84FF7FB4214BA466001BF74D /* KlineTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F9B214BA466001BF74D /* KlineTitleView.m */; };
+		84FF7FB5214BA466001BF74D /* KlineTimeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F9E214BA466001BF74D /* KlineTimeLayer.m */; };
+		84FF7FB6214BA466001BF74D /* KlineMALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7F9F214BA466001BF74D /* KlineMALayer.m */; };
+		84FF7FB7214BA466001BF74D /* KlineQuotaColumnLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7FA0214BA466001BF74D /* KlineQuotaColumnLayer.m */; };
+		84FF7FB8214BA466001BF74D /* KlineCandelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7FA4214BA466001BF74D /* KlineCandelLayer.m */; };
+		84FF7FB9214BA466001BF74D /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF7FA7214BA466001BF74D /* KLineModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,52 +55,52 @@
 		3B5D5BCF1F5F10A100C0E68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B5D5BD11F5F10A100C0E68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B945EAE9C2DE1399B9A393E /* libPods-AbuKlineView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AbuKlineView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		840AC4A6212D731A00F22AB0 /* UIBezierPath+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Extension.h"; sourceTree = "<group>"; };
-		840AC4A7212D731A00F22AB0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
-		840AC4A8212D731A00F22AB0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		840AC4A9212D731A00F22AB0 /* UIBezierPath+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Extension.m"; sourceTree = "<group>"; };
-		840AC4AA212D731A00F22AB0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
-		840AC4AB212D731A00F22AB0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		840AC4AD212D731A00F22AB0 /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
 		840AC4AE212D731A00F22AB0 /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocket.m; sourceTree = "<group>"; };
-		840AC4B1212D731A00F22AB0 /* KLineSubCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineSubCalculate.h; sourceTree = "<group>"; };
-		840AC4B2212D731A00F22AB0 /* KLineCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineCalculate.h; sourceTree = "<group>"; };
-		840AC4B4212D731A00F22AB0 /* KLineSubCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineSubCalculate.m; sourceTree = "<group>"; };
-		840AC4B5212D731A00F22AB0 /* KLineCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineCalculate.m; sourceTree = "<group>"; };
-		840AC4B8212D731A00F22AB0 /* AbuPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuPriceView.m; sourceTree = "<group>"; };
-		840AC4B9212D731A00F22AB0 /* AbuCandChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCandChartView.h; sourceTree = "<group>"; };
-		840AC4BA212D731A00F22AB0 /* AbuIdictorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuIdictorView.h; sourceTree = "<group>"; };
-		840AC4BC212D731A00F22AB0 /* AbuKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuKlineView.m; sourceTree = "<group>"; };
-		840AC4BD212D731A00F22AB0 /* AbuIdictorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuIdictorView.m; sourceTree = "<group>"; };
-		840AC4BE212D731A00F22AB0 /* AbuCandChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuCandChartView.m; sourceTree = "<group>"; };
-		840AC4BF212D731A00F22AB0 /* AbuPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuPriceView.h; sourceTree = "<group>"; };
-		840AC4C0212D731A00F22AB0 /* AbuKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuKlineView.h; sourceTree = "<group>"; };
-		840AC4C2212D731A00F22AB0 /* KlineTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineTitleView.h; sourceTree = "<group>"; };
-		840AC4C3212D731A00F22AB0 /* KlineTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineTitleView.m; sourceTree = "<group>"; };
-		840AC4C5212D731A00F22AB0 /* KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineModel.m; sourceTree = "<group>"; };
-		840AC4C6212D731A00F22AB0 /* AbuKlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuKlineModel.h; sourceTree = "<group>"; };
-		840AC4C7212D731A00F22AB0 /* AbuMacadPostionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuMacadPostionModel.h; sourceTree = "<group>"; };
-		840AC4C8212D731A00F22AB0 /* AbuPostionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuPostionModel.m; sourceTree = "<group>"; };
-		840AC4C9212D731A00F22AB0 /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
-		840AC4CA212D731A00F22AB0 /* AbuMacadPostionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuMacadPostionModel.m; sourceTree = "<group>"; };
-		840AC4CB212D731A00F22AB0 /* AbuKlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuKlineModel.m; sourceTree = "<group>"; };
-		840AC4CC212D731A00F22AB0 /* AbuPostionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuPostionModel.h; sourceTree = "<group>"; };
-		840AC4CF212D731A00F22AB0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		840AC4E0212D759D00F22AB0 /* stock15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock15.json; sourceTree = "<group>"; };
 		840AC4E1212D759D00F22AB0 /* stock30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock30.json; sourceTree = "<group>"; };
 		840AC4E2212D759D00F22AB0 /* stock5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock5.json; sourceTree = "<group>"; };
 		840AC4E3212D759D00F22AB0 /* stock60.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock60.json; sourceTree = "<group>"; };
 		840AC4E8212D768900F22AB0 /* stockDay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockDay.json; sourceTree = "<group>"; };
-		843E013D2133A36F0089D196 /* KlineCandleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KlineCandleLayer.h; sourceTree = "<group>"; };
-		843E013E2133A36F0089D196 /* KlineCandleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlineCandleLayer.m; sourceTree = "<group>"; };
 		843E01432133D98A0089D196 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		843E01442133D98A0089D196 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		843E01462133DE0B0089D196 /* AbuCharViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCharViewProtocol.h; sourceTree = "<group>"; };
-		843E01482133DEE60089D196 /* KlineDataReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineDataReformer.m; sourceTree = "<group>"; };
-		843E014A2133DEE60089D196 /* KlineDataReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineDataReformer.h; sourceTree = "<group>"; };
-		843E014B2133DEE70089D196 /* KlineCandleDataReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineCandleDataReformer.h; sourceTree = "<group>"; };
-		843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineCandleDataReformer.m; sourceTree = "<group>"; };
 		84A6C6621FCED0660094FDA5 /* stock1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stock1.json; sourceTree = "<group>"; };
+		84FF7F7B214BA466001BF74D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		84FF7F7D214BA466001BF74D /* UIBezierPath+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Extension.h"; sourceTree = "<group>"; };
+		84FF7F7E214BA466001BF74D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		84FF7F7F214BA466001BF74D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		84FF7F80214BA466001BF74D /* UIBezierPath+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Extension.m"; sourceTree = "<group>"; };
+		84FF7F81214BA466001BF74D /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		84FF7F82214BA466001BF74D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		84FF7F86214BA466001BF74D /* KLineSubCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineSubCalculate.h; sourceTree = "<group>"; };
+		84FF7F87214BA466001BF74D /* KLineCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineCalculate.h; sourceTree = "<group>"; };
+		84FF7F88214BA466001BF74D /* KLineSocketDataRefersh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineSocketDataRefersh.h; sourceTree = "<group>"; };
+		84FF7F89214BA466001BF74D /* KLineSubCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineSubCalculate.m; sourceTree = "<group>"; };
+		84FF7F8A214BA466001BF74D /* KLineCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineCalculate.m; sourceTree = "<group>"; };
+		84FF7F8B214BA466001BF74D /* KLineSocketDataRefersh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineSocketDataRefersh.m; sourceTree = "<group>"; };
+		84FF7F8D214BA466001BF74D /* KlineCurrentPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineCurrentPriceView.h; sourceTree = "<group>"; };
+		84FF7F8E214BA466001BF74D /* KlineVerticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineVerticalView.h; sourceTree = "<group>"; };
+		84FF7F8F214BA466001BF74D /* KlinePriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlinePriceView.m; sourceTree = "<group>"; };
+		84FF7F90214BA466001BF74D /* KlineCurrentPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineCurrentPriceView.m; sourceTree = "<group>"; };
+		84FF7F91214BA466001BF74D /* KlinePriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlinePriceView.h; sourceTree = "<group>"; };
+		84FF7F92214BA466001BF74D /* KlineVerticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineVerticalView.m; sourceTree = "<group>"; };
+		84FF7F94214BA466001BF74D /* AbuCandChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCandChartView.h; sourceTree = "<group>"; };
+		84FF7F95214BA466001BF74D /* AbuCharViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuCharViewProtocol.h; sourceTree = "<group>"; };
+		84FF7F96214BA466001BF74D /* AbuKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuKlineView.m; sourceTree = "<group>"; };
+		84FF7F97214BA466001BF74D /* AbuCandChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbuCandChartView.m; sourceTree = "<group>"; };
+		84FF7F98214BA466001BF74D /* AbuKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbuKlineView.h; sourceTree = "<group>"; };
+		84FF7F9A214BA466001BF74D /* KlineTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineTitleView.h; sourceTree = "<group>"; };
+		84FF7F9B214BA466001BF74D /* KlineTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineTitleView.m; sourceTree = "<group>"; };
+		84FF7F9E214BA466001BF74D /* KlineTimeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineTimeLayer.m; sourceTree = "<group>"; };
+		84FF7F9F214BA466001BF74D /* KlineMALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineMALayer.m; sourceTree = "<group>"; };
+		84FF7FA0214BA466001BF74D /* KlineQuotaColumnLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineQuotaColumnLayer.m; sourceTree = "<group>"; };
+		84FF7FA1214BA466001BF74D /* KlineCandelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineCandelLayer.h; sourceTree = "<group>"; };
+		84FF7FA2214BA466001BF74D /* KlineTimeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineTimeLayer.h; sourceTree = "<group>"; };
+		84FF7FA3214BA466001BF74D /* KlineMALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineMALayer.h; sourceTree = "<group>"; };
+		84FF7FA4214BA466001BF74D /* KlineCandelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlineCandelLayer.m; sourceTree = "<group>"; };
+		84FF7FA5214BA466001BF74D /* KlineQuotaColumnLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlineQuotaColumnLayer.h; sourceTree = "<group>"; };
+		84FF7FA7214BA466001BF74D /* KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineModel.m; sourceTree = "<group>"; };
+		84FF7FA8214BA466001BF74D /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
 		BB62F47A80B624362DDD64EB /* Pods-AbuKlineView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbuKlineView.release.xcconfig"; path = "Pods/Target Support Files/Pods-AbuKlineView/Pods-AbuKlineView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,12 +137,7 @@
 		3B5D5BBF1F5F10A100C0E68B /* AbuKlineView */ = {
 			isa = PBXGroup;
 			children = (
-				843E013C2133A0AC0089D196 /* KlineCandleLayer */,
-				840AC4CE212D731A00F22AB0 /* APIManage */,
-				840AC4A5212D731A00F22AB0 /* Category */,
-				840AC4C4212D731A00F22AB0 /* KLineModel */,
-				840AC4CD212D731A00F22AB0 /* KLineProtocol */,
-				840AC4AF212D731A00F22AB0 /* KLineView */,
+				84FF7F79214BA466001BF74D /* KlineView */,
 				840AC4AC212D731A00F22AB0 /* WebSocketManage */,
 				3B5D5BC31F5F10A100C0E68B /* AppDelegate.h */,
 				3B5D5BC41F5F10A100C0E68B /* AppDelegate.m */,
@@ -182,19 +177,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		840AC4A5212D731A00F22AB0 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				840AC4A6212D731A00F22AB0 /* UIBezierPath+Extension.h */,
-				840AC4A9212D731A00F22AB0 /* UIBezierPath+Extension.m */,
-				840AC4A7212D731A00F22AB0 /* UIColor+Extension.h */,
-				840AC4AA212D731A00F22AB0 /* UIColor+Extension.m */,
-				840AC4A8212D731A00F22AB0 /* UIView+Extension.h */,
-				840AC4AB212D731A00F22AB0 /* UIView+Extension.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		840AC4AC212D731A00F22AB0 /* WebSocketManage */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,93 +186,135 @@
 			path = WebSocketManage;
 			sourceTree = "<group>";
 		};
-		840AC4AF212D731A00F22AB0 /* KLineView */ = {
+		84FF7F79214BA466001BF74D /* KlineView */ = {
 			isa = PBXGroup;
 			children = (
-				840AC4B0212D731A00F22AB0 /* KLineCaculate */,
-				840AC4B7212D731A00F22AB0 /* KLineView */,
-				840AC4C1212D731A00F22AB0 /* KLineTitleView */,
+				84FF7F7A214BA466001BF74D /* APIManage */,
+				84FF7F7C214BA466001BF74D /* Category */,
+				84FF7F83214BA466001BF74D /* KLineProtocol */,
+				84FF7F84214BA466001BF74D /* KLineView */,
+				84FF7FA6214BA466001BF74D /* KLineModel */,
 			);
-			path = KLineView;
+			path = KlineView;
 			sourceTree = "<group>";
 		};
-		840AC4B0212D731A00F22AB0 /* KLineCaculate */ = {
+		84FF7F7A214BA466001BF74D /* APIManage */ = {
 			isa = PBXGroup;
 			children = (
-				840AC4B1212D731A00F22AB0 /* KLineSubCalculate.h */,
-				840AC4B4212D731A00F22AB0 /* KLineSubCalculate.m */,
-				840AC4B2212D731A00F22AB0 /* KLineCalculate.h */,
-				840AC4B5212D731A00F22AB0 /* KLineCalculate.m */,
-				843E014B2133DEE70089D196 /* KlineCandleDataReformer.h */,
-				843E014C2133DEE70089D196 /* KlineCandleDataReformer.m */,
-				843E014A2133DEE60089D196 /* KlineDataReformer.h */,
-				843E01482133DEE60089D196 /* KlineDataReformer.m */,
-			);
-			path = KLineCaculate;
-			sourceTree = "<group>";
-		};
-		840AC4B7212D731A00F22AB0 /* KLineView */ = {
-			isa = PBXGroup;
-			children = (
-				840AC4BF212D731A00F22AB0 /* AbuPriceView.h */,
-				840AC4B8212D731A00F22AB0 /* AbuPriceView.m */,
-				840AC4B9212D731A00F22AB0 /* AbuCandChartView.h */,
-				840AC4BE212D731A00F22AB0 /* AbuCandChartView.m */,
-				840AC4BA212D731A00F22AB0 /* AbuIdictorView.h */,
-				840AC4BD212D731A00F22AB0 /* AbuIdictorView.m */,
-				840AC4C0212D731A00F22AB0 /* AbuKlineView.h */,
-				840AC4BC212D731A00F22AB0 /* AbuKlineView.m */,
-			);
-			path = KLineView;
-			sourceTree = "<group>";
-		};
-		840AC4C1212D731A00F22AB0 /* KLineTitleView */ = {
-			isa = PBXGroup;
-			children = (
-				840AC4C2212D731A00F22AB0 /* KlineTitleView.h */,
-				840AC4C3212D731A00F22AB0 /* KlineTitleView.m */,
-			);
-			path = KLineTitleView;
-			sourceTree = "<group>";
-		};
-		840AC4C4212D731A00F22AB0 /* KLineModel */ = {
-			isa = PBXGroup;
-			children = (
-				840AC4C9212D731A00F22AB0 /* KLineModel.h */,
-				840AC4C5212D731A00F22AB0 /* KLineModel.m */,
-				840AC4C6212D731A00F22AB0 /* AbuKlineModel.h */,
-				840AC4CB212D731A00F22AB0 /* AbuKlineModel.m */,
-				840AC4C7212D731A00F22AB0 /* AbuMacadPostionModel.h */,
-				840AC4CA212D731A00F22AB0 /* AbuMacadPostionModel.m */,
-				840AC4CC212D731A00F22AB0 /* AbuPostionModel.h */,
-				840AC4C8212D731A00F22AB0 /* AbuPostionModel.m */,
-			);
-			path = KLineModel;
-			sourceTree = "<group>";
-		};
-		840AC4CD212D731A00F22AB0 /* KLineProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				843E01462133DE0B0089D196 /* AbuCharViewProtocol.h */,
-			);
-			path = KLineProtocol;
-			sourceTree = "<group>";
-		};
-		840AC4CE212D731A00F22AB0 /* APIManage */ = {
-			isa = PBXGroup;
-			children = (
-				840AC4CF212D731A00F22AB0 /* PrefixHeader.pch */,
+				84FF7F7B214BA466001BF74D /* PrefixHeader.pch */,
 			);
 			path = APIManage;
 			sourceTree = "<group>";
 		};
-		843E013C2133A0AC0089D196 /* KlineCandleLayer */ = {
+		84FF7F7C214BA466001BF74D /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				843E013D2133A36F0089D196 /* KlineCandleLayer.h */,
-				843E013E2133A36F0089D196 /* KlineCandleLayer.m */,
+				84FF7F7D214BA466001BF74D /* UIBezierPath+Extension.h */,
+				84FF7F7E214BA466001BF74D /* UIColor+Extension.h */,
+				84FF7F7F214BA466001BF74D /* UIView+Extension.h */,
+				84FF7F80214BA466001BF74D /* UIBezierPath+Extension.m */,
+				84FF7F81214BA466001BF74D /* UIColor+Extension.m */,
+				84FF7F82214BA466001BF74D /* UIView+Extension.m */,
 			);
-			path = KlineCandleLayer;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84FF7F83214BA466001BF74D /* KLineProtocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KLineProtocol;
+			sourceTree = "<group>";
+		};
+		84FF7F84214BA466001BF74D /* KLineView */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F85214BA466001BF74D /* KLineCaculate */,
+				84FF7F8C214BA466001BF74D /* KlineCommonView */,
+				84FF7F93214BA466001BF74D /* KLineView */,
+				84FF7F99214BA466001BF74D /* KLineTitleView */,
+				84FF7F9C214BA466001BF74D /* KLineCandelLayer */,
+				84FF7F9D214BA466001BF74D /* KLineLayer */,
+			);
+			path = KLineView;
+			sourceTree = "<group>";
+		};
+		84FF7F85214BA466001BF74D /* KLineCaculate */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F86214BA466001BF74D /* KLineSubCalculate.h */,
+				84FF7F87214BA466001BF74D /* KLineCalculate.h */,
+				84FF7F88214BA466001BF74D /* KLineSocketDataRefersh.h */,
+				84FF7F89214BA466001BF74D /* KLineSubCalculate.m */,
+				84FF7F8A214BA466001BF74D /* KLineCalculate.m */,
+				84FF7F8B214BA466001BF74D /* KLineSocketDataRefersh.m */,
+			);
+			path = KLineCaculate;
+			sourceTree = "<group>";
+		};
+		84FF7F8C214BA466001BF74D /* KlineCommonView */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F8D214BA466001BF74D /* KlineCurrentPriceView.h */,
+				84FF7F8E214BA466001BF74D /* KlineVerticalView.h */,
+				84FF7F8F214BA466001BF74D /* KlinePriceView.m */,
+				84FF7F90214BA466001BF74D /* KlineCurrentPriceView.m */,
+				84FF7F91214BA466001BF74D /* KlinePriceView.h */,
+				84FF7F92214BA466001BF74D /* KlineVerticalView.m */,
+			);
+			path = KlineCommonView;
+			sourceTree = "<group>";
+		};
+		84FF7F93214BA466001BF74D /* KLineView */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F95214BA466001BF74D /* AbuCharViewProtocol.h */,
+				84FF7F94214BA466001BF74D /* AbuCandChartView.h */,
+				84FF7F97214BA466001BF74D /* AbuCandChartView.m */,
+				84FF7F98214BA466001BF74D /* AbuKlineView.h */,
+				84FF7F96214BA466001BF74D /* AbuKlineView.m */,
+			);
+			path = KLineView;
+			sourceTree = "<group>";
+		};
+		84FF7F99214BA466001BF74D /* KLineTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F9A214BA466001BF74D /* KlineTitleView.h */,
+				84FF7F9B214BA466001BF74D /* KlineTitleView.m */,
+			);
+			path = KLineTitleView;
+			sourceTree = "<group>";
+		};
+		84FF7F9C214BA466001BF74D /* KLineCandelLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KLineCandelLayer;
+			sourceTree = "<group>";
+		};
+		84FF7F9D214BA466001BF74D /* KLineLayer */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7F9E214BA466001BF74D /* KlineTimeLayer.m */,
+				84FF7F9F214BA466001BF74D /* KlineMALayer.m */,
+				84FF7FA0214BA466001BF74D /* KlineQuotaColumnLayer.m */,
+				84FF7FA1214BA466001BF74D /* KlineCandelLayer.h */,
+				84FF7FA2214BA466001BF74D /* KlineTimeLayer.h */,
+				84FF7FA3214BA466001BF74D /* KlineMALayer.h */,
+				84FF7FA4214BA466001BF74D /* KlineCandelLayer.m */,
+				84FF7FA5214BA466001BF74D /* KlineQuotaColumnLayer.h */,
+			);
+			path = KLineLayer;
+			sourceTree = "<group>";
+		};
+		84FF7FA6214BA466001BF74D /* KLineModel */ = {
+			isa = PBXGroup;
+			children = (
+				84FF7FA7214BA466001BF74D /* KLineModel.m */,
+				84FF7FA8214BA466001BF74D /* KLineModel.h */,
+			);
+			path = KLineModel;
 			sourceTree = "<group>";
 		};
 		E72041AE25B125B33B20953D /* Pods */ = {
@@ -418,28 +442,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840AC4DD212D731A00F22AB0 /* AbuPostionModel.m in Sources */,
 				843E01452133D98A0089D196 /* BaseViewController.m in Sources */,
-				840AC4D7212D731A00F22AB0 /* AbuPriceView.m in Sources */,
-				840AC4D2212D731A00F22AB0 /* UIView+Extension.m in Sources */,
-				843E014E2133DEE70089D196 /* KlineDataReformer.m in Sources */,
-				840AC4D4212D731A00F22AB0 /* KLineSubCalculate.m in Sources */,
-				840AC4D8212D731A00F22AB0 /* AbuKlineView.m in Sources */,
 				3B5D5BC81F5F10A100C0E68B /* ViewController.m in Sources */,
+				84FF7FB7214BA466001BF74D /* KlineQuotaColumnLayer.m in Sources */,
+				84FF7FAD214BA466001BF74D /* KLineCalculate.m in Sources */,
 				3B5D5BC51F5F10A100C0E68B /* AppDelegate.m in Sources */,
+				84FF7FB9214BA466001BF74D /* KLineModel.m in Sources */,
+				84FF7FB1214BA466001BF74D /* KlineVerticalView.m in Sources */,
+				84FF7FAF214BA466001BF74D /* KlinePriceView.m in Sources */,
+				84FF7FB8214BA466001BF74D /* KlineCandelLayer.m in Sources */,
+				84FF7FAA214BA466001BF74D /* UIColor+Extension.m in Sources */,
+				84FF7FA9214BA466001BF74D /* UIBezierPath+Extension.m in Sources */,
+				84FF7FB5214BA466001BF74D /* KlineTimeLayer.m in Sources */,
+				84FF7FB3214BA466001BF74D /* AbuCandChartView.m in Sources */,
+				84FF7FB0214BA466001BF74D /* KlineCurrentPriceView.m in Sources */,
+				84FF7FB2214BA466001BF74D /* AbuKlineView.m in Sources */,
+				84FF7FAE214BA466001BF74D /* KLineSocketDataRefersh.m in Sources */,
+				84FF7FB6214BA466001BF74D /* KlineMALayer.m in Sources */,
 				840AC4D3212D731A00F22AB0 /* WebSocket.m in Sources */,
-				840AC4D1212D731A00F22AB0 /* UIColor+Extension.m in Sources */,
+				84FF7FAB214BA466001BF74D /* UIView+Extension.m in Sources */,
+				84FF7FB4214BA466001BF74D /* KlineTitleView.m in Sources */,
 				3B5D5BC21F5F10A100C0E68B /* main.m in Sources */,
-				840AC4D5212D731A00F22AB0 /* KLineCalculate.m in Sources */,
-				843E014F2133DEE70089D196 /* KlineCandleDataReformer.m in Sources */,
-				840AC4DC212D731A00F22AB0 /* KLineModel.m in Sources */,
-				840AC4D0212D731A00F22AB0 /* UIBezierPath+Extension.m in Sources */,
-				840AC4DE212D731A00F22AB0 /* AbuMacadPostionModel.m in Sources */,
-				840AC4DF212D731A00F22AB0 /* AbuKlineModel.m in Sources */,
-				843E013F2133A36F0089D196 /* KlineCandleLayer.m in Sources */,
-				840AC4DA212D731A00F22AB0 /* AbuCandChartView.m in Sources */,
-				840AC4DB212D731A00F22AB0 /* KlineTitleView.m in Sources */,
-				840AC4D9212D731A00F22AB0 /* AbuIdictorView.m in Sources */,
+				84FF7FAC214BA466001BF74D /* KLineSubCalculate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

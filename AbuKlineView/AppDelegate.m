@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "WebSocket.h"
 @interface AppDelegate ()
 
 @end

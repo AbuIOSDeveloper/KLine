@@ -1,13 +1,13 @@
 //
-//  Prefix.pch
-//  AbuKlineView
+//  PrefixHeader.pch
+//  ABuKLineChartView
 //
-//  Created by Jefferson.zhang on 2017/9/6.
-//  Copyright © 2017年 阿布. All rights reserved.
+//  Created by jefferson on 2018/7/18.
+//  Copyright © 2018年 jefferson. All rights reserved.
 //
 
-#ifndef Prefix_h
-#define Prefix_h
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
 
 #ifdef __OBJC__
 
@@ -35,7 +35,6 @@
 #import "UIColor+Extension.h"
 #import "UIView+Extension.h"
 #import "UIBezierPath+Extension.h"
-
 
 /** ********************宏定义******************** */
 
@@ -88,19 +87,14 @@
 #define priceWidth 60
 
 #define RISECOLOR [UIColor colorWithHexString:@"#fb463e"]
-
 #define DROPCOLOR [UIColor colorWithHexString:@"#30b840"]
-
 #define Orientation [[UIApplication sharedApplication] statusBarOrientation]
-
 #define Portrait (Orientation==UIDeviceOrientationPortrait||Orientation==UIDeviceOrientationPortraitUpsideDown)
 #define LandscapeLeft (Orientation == UIDeviceOrientationLandscapeLeft)
-
 #define TotalWidth      (Portrait ? (PortraitTotalWidth) : (LanscapeTotalWidth))
 
 #define PortraitTotalWidth    KSCREEN_WIDTH
 #define LanscapeTotalWidth    KSCREEN_HEIGHT
-
 #define KSCREEN_WIDTH    MIN([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
 #define KSCREEN_HEIGHT   MAX([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
 
@@ -111,25 +105,16 @@ typedef enum
     WR
 }DataLineType;
 
-/**
- * 线状柱或者柱状柱
- */
 typedef NS_ENUM(NSUInteger, ColumnWidthType) {
     ColumnWidthTypeEqualCandle = 0,
     ColumnWidthTypeEqualLine,
 };
 
-/**
- * 主图或副图
- */
 typedef NS_ENUM(NSUInteger, KlineWireSubOrMain) {
     Main = 0,
     Sub,
 };
 
-/**
- * 线状类型
- */
 typedef NS_ENUM(NSUInteger, WIRETYPE) {
     MA5TYPE = 0,
     MA10TYPE,
@@ -161,4 +146,4 @@ typedef NS_ENUM(NSInteger, KlineSubKPIType) {
 
 #endif
 
-#endif /* Prefix_h */
+#endif /* PrefixHeader_h */
