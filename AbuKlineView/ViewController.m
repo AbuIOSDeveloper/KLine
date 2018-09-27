@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "KLineSubCalculate.h"
+#import <KlineFramework/KlineFramework.h>
+#import <KlineFramework/KlineTitleView.h>
+#import <KlineFramework/WebSocket.h>
+#import <KlineFramework/KLineModel.h>
+#import <KlineFramework/AbuKlineView.h>
+#import <KlineFramework/PrefixHeader.h>
+#import <Masonry.h>
 @interface ViewController ()<KlineTitleViewDelegate,webSocketDelegate>
 
 @property (nonatomic, strong) NSString              * currentRequestType;

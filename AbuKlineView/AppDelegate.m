@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "WebSocket.h"
+#import <KlineFramework/WebSocket.h>
 @interface AppDelegate ()
 
 @end
