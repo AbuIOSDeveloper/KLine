@@ -1,0 +1,160 @@
+//
+//  Prefix.pch
+//  AbuKlineView
+//
+//  Created by Jefferson.zhang on 2017/9/6.
+//  Copyright © 2017年 阿布. All rights reserved.
+//
+
+#ifndef Prefix_h
+#define Prefix_h
+
+#ifdef __OBJC__
+
+#import <Masonry.h>
+#import <KVOController.h>
+
+#import "KlineTitleView.h"
+#import "AbuCharViewProtocol.h"
+#import "AbuKlineView.h"
+
+
+/** ********************数据模型******************** */
+#import "KLineModel.h"
+
+
+
+/** ********************单例******************** */
+#import "KLineCalculate.h"
+#import "KLineSubCalculate.h"
+
+/** ********************扩展类******************** */
+#import "UIColor+Extension.h"
+#import "UIView+Extension.h"
+#import "UIBezierPath+Extension.h"
+
+
+/** ********************宏定义******************** */
+
+#define ContentOffSet @"contentOffset"
+
+
+#define IsDictionaryNull(dict) (nil == dict || ![dict isKindOfClass:[NSDictionary class]]\
+|| [dict isKindOfClass:[NSNull class]] || [dict allKeys].count <= 0)
+#define IsArrayNull(array) ((nil == array || ![array isKindOfClass:[NSArray class]]\
+|| [array isKindOfClass:[NSNull class]] || array.count <= 0))
+#define IsStringNull(string) (nil == string || [string isKindOfClass:[NSNull class]] \
+|| string.length <= 0)
+#define IsObjectNull(object) (nil == object || [object isKindOfClass:[NSNull class]])
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+
+#define widthradio  SCREENWIDTH/375
+#define heightradio SCREENHEIGHT/667
+
+#define midDistance 40
+#define topDistance 10
+#define leftDistance 10
+#define rightDistance 10
+#define bottomDistance 10
+
+#define timeheight 15
+
+#define MinCount 10
+#define MaxCount 30
+
+#define KlineCount 88
+
+#define maxCandelWith 20
+
+#define minCandelWith 4
+
+#define ChartViewHigh 400
+
+#define LandscapeChartViewHigh 300
+
+#define orignScale 1.0
+#define orignChartScale 3.0f/2.0f
+#define orignIndicatorScale  1.0f / 3.0f
+#define orignIndicatorOrignY 2.0f * orignIndicatorScale
+
+#define priceWidth 60
+
+#define RISECOLOR [UIColor colorWithHexString:@"#fb463e"]
+
+#define DROPCOLOR [UIColor colorWithHexString:@"#30b840"]
+
+#define Orientation [[UIApplication sharedApplication] statusBarOrientation]
+
+#define Portrait (Orientation==UIDeviceOrientationPortrait||Orientation==UIDeviceOrientationPortraitUpsideDown)
+#define LandscapeLeft (Orientation == UIDeviceOrientationLandscapeLeft)
+
+#define TotalWidth      (Portrait ? (PortraitTotalWidth) : (LanscapeTotalWidth))
+
+#define PortraitTotalWidth    KSCREEN_WIDTH
+#define LanscapeTotalWidth    KSCREEN_HEIGHT
+
+#define KSCREEN_WIDTH    MIN([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
+#define KSCREEN_HEIGHT   MAX([UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)
+
+typedef enum
+{
+    MACD = 1,
+    KDJ,
+    WR
+}DataLineType;
+
+/**
+ * 线状柱或者柱状柱
+ */
+typedef NS_ENUM(NSUInteger, ColumnWidthType) {
+    ColumnWidthTypeEqualCandle = 0,
+    ColumnWidthTypeEqualLine,
+};
+
+/**
+ * 主图或副图
+ */
+typedef NS_ENUM(NSUInteger, KlineWireSubOrMain) {
+    Main = 0,
+    Sub,
+};
+
+/**
+ * 线状类型
+ */
+typedef NS_ENUM(NSUInteger, WIRETYPE) {
+    MA5TYPE = 0,
+    MA10TYPE,
+    MA20TYPE,
+    MACDDIFF,
+    MACDDEA,
+    KDJ_K,
+    KDJ_D,
+    KDJ_J,
+    KLINE_WR,
+};
+
+typedef NS_ENUM(NSInteger, KlineSubKPIType) {
+    KlineSubKPITypeATR = 0,
+    KlineSubKPITypeBIAS = 1,
+    KlineSubKPITypeCCI = 2,
+    KlineSubKPITypeKD = 3,
+    KlineSubKPITypeMACD = 4,
+    KlineSubKPITypeRSI = 5,
+    KlineSubKPITypeW_R = 6,
+    KlineSubKPITypeARBR = 7,
+    KlineSubKPITypeDKBY = 8,
+    KlineSubKPITypeKDJ = 9,
+    KlineSubKPITypeLW_R = 10, ///< _ -> &
+    KlineSubKPITypeQHLSR = 11,
+    KlineSubKPITypeKD5 = 12,
+    KlineSubKPITypeMACD24 = 13,
+};
+
+#endif
+
+#endif /* Prefix_h */

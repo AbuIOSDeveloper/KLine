@@ -8,14 +8,8 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import <KlineFramework/KlineFramework.h>
-#import <KlineFramework/KlineTitleView.h>
-#import <KlineFramework/WebSocket.h>
-#import <KlineFramework/KLineModel.h>
-#import <KlineFramework/AbuKlineView.h>
-#import <KlineFramework/PrefixHeader.h>
-#import <Masonry.h>
-@interface ViewController ()<KlineTitleViewDelegate,webSocketDelegate>
+#import "KLineSubCalculate.h"
+@interface ViewController ()<KlineTitleViewDelegate>
 
 @property (nonatomic, strong) NSString              * currentRequestType;
 
@@ -25,13 +19,10 @@
 
 @property (nonatomic, strong) AbuKlineView          * kLineView;
 
-@property (nonatomic,strong)  KLineModel            * model; //K线模型
+@property (nonatomic,strong)  KLineModel            * model;
 
 @property (nonatomic,strong)  NSMutableArray        * dataSource;
 
-/**
- *横竖屏方向
- */
 @property (nonatomic,assign) UIInterfaceOrientation orientation;
 
 @end
@@ -71,24 +62,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
-    [WebSocket shareWebSocketManage].delegate = self;
     self.currentType = K_LINE_1MIN;
     [self buildKLineTitleView];
     [self.view addSubview:self.kLineView];
     [self addKLineSubView];
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44) ];
-    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [button setTitle:@"旋转" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(rotateScreen:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    UIButton *selecteButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44) ];
-    selecteButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [selecteButton setTitle:@"隐藏" forState:UIControlStateNormal];
-    [selecteButton setTitle:@"显示" forState:UIControlStateSelected];
-    [selecteButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [selecteButton addTarget:self action:@selector(selecteAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:selecteButton];
       [self requestKLineViewHistoryListWithType:self.currentType];
 }
 
@@ -109,7 +86,6 @@
             make.top.equalTo(weakSelf.view).offset(100);
             make.height.mas_offset(30);
         }];
-        //翻转为竖屏时
         [self.kLineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(weakSelf.view).offset(132);
             make.right.equalTo(weakSelf.view.mas_right);
@@ -132,43 +108,6 @@
     }
 }
 
-- (void)rotateScreen:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
-    WS(weakSelf);
-    if (sender.selected) {
-        [self supportRotion:UIInterfaceOrientationLandscapeLeft];
-        [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(40);
-        }];
-        [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(72);
-            make.height.mas_offset(LandscapeChartViewHigh);
-        }];
-        
-    } else {
-        [self supportRotion:UIInterfaceOrientationPortrait];
-        [self.klineTitleView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(100);
-        }];
-        [self.kLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.view).offset(132);
-            make.height.mas_offset(ChartViewHigh);
-        }];
-    }
-}
-- (void)selecteAction:(UIButton *)sender
-{
-    sender.selected = !sender.selected;
-    BOOL show;
-    if (sender.selected) {
-        show = NO;
-    }
-    else
-    {
-        show = YES;
-    }
-    [self.kLineView isShowOrHiddenIditionChart:show];
-}
 - (void)selectIndex:(KLINETYPE)type
 {
     if (type == self.currentType) {
@@ -214,16 +153,9 @@
     }
 }
 
-
-
-#pragma mark --------------------------------------webSocketDelegate
-
-#pragma mark --------------------------------------返回K线历史数据
 - (void)loadStockDataWithJson:(NSString *)json
 {
-    // 获取文件路径
     NSString *Path = [[NSBundle mainBundle] pathForResource:json ofType:@"json"];
-    // 将文件数据化
     NSData *data = [[NSData alloc] initWithContentsOfFile:Path];
     
     NSDictionary * stockDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -256,18 +188,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.kLineView.dataArray = self.dataSource;
     });
-}
-
-#pragma mark --------------------------------------刷新K线
-- (void)refreshKline:(NSDictionary *)dict
-{
-   //后续接上socket再写
-}
-
-
-- (void)socketConnected
-{
-  
 }
 
 - (NSString *)changeDtaForMatMmDd:(NSString *)data range:(NSRange)range
