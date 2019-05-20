@@ -13,7 +13,6 @@ K线绘制(火币)
 
 横竖屏完美适配(暂时没有适配iPhoneX)、随意切换
 ![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/Resource/竖屏.png)
-![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/横屏图.png)
 
 
 
