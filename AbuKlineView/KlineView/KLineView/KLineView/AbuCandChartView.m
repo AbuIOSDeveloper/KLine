@@ -202,18 +202,6 @@
 
 
 
-- (void)refreshKLineView:(KLineModel *)model
-{
-       if (self.previousOffsetX <= self.scrollView.width + 5) {
-           self.isRefresh = YES;
-          }
-        else
-         {
-           self.isRefresh = NO;
-        }
-    [self updateWidth];
-}
-
 #pragma mark publicMethod
 
 - (CAShapeLayer*)getAxispLayer
