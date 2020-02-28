@@ -24,5 +24,8 @@ K线幅图指标计算（能与国际主流平台数据完美吻合，只给出�
 后面将继续优化刷新逻辑、添加分时图、各种周期图的切换。
 本GitHub已有GCDAsynSocket与Websocket的demo，行情尽在你的眼前，喜欢的给个star哦，谢谢！
 
+喜欢的可以打赏一下，交流炒股心得
+![image](https://github.com/AbuIOSDeveloper/KLine/blob/master/WX%402x.png)
+
 
 
